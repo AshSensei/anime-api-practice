@@ -3,11 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--google fonts used for sign in and design-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>aniDB API pull</title>
 </head>
 <body>
-    <h1>hi</h1>
+    
+
+    <div id="insertTitle">
+        <h1>Enter the aniDB ID of the anime you want to find:</h1>
+        <h5>(Naruto's ID is 239)</h5>
+        <form action="" id="enterAnime">
+            <input type="text" id="animeID">
+            <input type="submit" value="Find Anime">
+        </form>
+        
+    </div>
+    
     <button id='btn' onclick="getAnimeTitle()">Get anime title of Naruto</button>
     <script src="main.js"></script>
 </body>

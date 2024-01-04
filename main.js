@@ -5,7 +5,6 @@ async function getAnimeTitle(animeId) {
         const baseUrl = 'http://api.anidb.net:9001/httpapi?';
         const clientName = 'aaaaa';
         const clientVersion = 1;
-        const animeId = 239;
         const response = await fetch (`${baseUrl}request=anime&client=${clientName}&clientver=${clientVersion}&protover=1&aid=${animeId}`, {
             method: 'GET',
             headers:{
@@ -23,6 +22,11 @@ async function getAnimeTitle(animeId) {
             const title = titleElement ? titleElement.textContent : null;
         
             console.log('Title:', title);
+
+            const animeTitle = document.createElement("h2");
+            animeTitle.innerText = title;
+            
+            document.getElementById("insertTitle").appendChild(animeTitle);
         })
         .catch(error => {
             console.error('Error reading response body:', error);
@@ -36,3 +40,12 @@ async function getAnimeTitle(animeId) {
 }
 
 // http://api.anidb.net:9001/httpapi?client={str}&clientver={int}&protover=1
+
+
+document.getElementById("enterAnime").addEventListener("submit", (e) => {
+    //console.log(document.getElementById('animeID').value)
+    e.preventDefault();
+  
+    
+    getAnimeTitle(document.getElementById('animeID').value);
+});

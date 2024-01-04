@@ -1,0 +1,18 @@
+/*Background Color & Website Font*/
+body {
+    background-color: #E8E8E4;
+    height:100vh;
+    font-family: 'Inter', sans-serif;
+    display:flex;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#btn{
+    
+}
+#insertTitle{
+    flex-direction: row; 
+}
